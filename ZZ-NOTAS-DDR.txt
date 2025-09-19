@@ -1,0 +1,19 @@
+NOTAS ESPECIALES QUE TUVE QUE HACER PARA QUE ENTO FUNQUE:
+
+-Del juego original solo cambie la funcion String.format en 2 lugares porque el compilador HTML no la reconoce
+
+-Las puebas con el localhost las configure para puerto 8081 porque el 8080 estandas no funcaba
+
+-Para ejecutar en local host en el Intellij se puede usar en el Grandle a la derecha:
+HeroRunGameWeb/html/Task/gwt/superDev
+pero hay muchas otras opciones que funcionan
+
+-Para el Deploy y generar la carpeta "dist":
+HeroRunGameWeb/html/Task/other/dist
+Y queda en la carpeta:
+..\HeroRunGameWeb\html\build\dist
+esa carpeta se copia a Netlify
+
+-Atencion, cuando se entra a la pagina arranca bien todo menos la musica, pero eso es por un bloque del navegador.
+
+
