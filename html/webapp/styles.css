@@ -1,69 +1,117 @@
-canvas {
-    cursor: default;
-    outline: none;
-}
-
-/* Fondo y centrado */
-body {
-    background-color: #222222;
+/* --- Reset y fondo general --- */
+body, html {
     margin: 0;
+    padding: 0;
+    background-color: #222222;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.App-header {
+    background-color: #282c34;
+    color: white;
     display: flex;
-    justify-content: center;  /* centra horizontal */
-    align-items: center;      /* centra vertical */
-    height: 100vh;            /* ocupa toda la ventana */
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
 }
 
-/* Fuerza el tamaño del juego */
-#embed-html canvas {
-    width: 800px !important;
-    height: 480px !important;
-    display: block;
-    margin: 0 auto;
-    border: 2px solid #444;   /* opcional, marco */
-    background: black;        /* opcional, fondo */
+/* Bloque central: logo + título + GitHub */
+.header-center {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-p {
-    text-align: center;
-    color: #eeeeee;
+/* Logo */
+.header-logo {
+    height: 50px;
+    margin-right: 10px;
 }
 
-a {
-    text-align: center;
-    color: #bbbbff;
+/* Título + subtítulo */
+.header-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-right: 8px;
 }
 
-.superdev {
-    color: rgb(37,37,37);
-    text-shadow: 0px 1px 1px rgba(250,250,250,0.1);
-    font-size: 50pt;
-    display: block;
-    position: relative;
+.header-title {
+    margin: 0;
+    font-size: 1.8rem;
+    padding-left: 10px;
+}
+
+.header-subtitle {
+    font-size: 0.9rem;
+    color: #61dafb;
     text-decoration: none;
-    background-color: rgb(83,87,93);
-    box-shadow: 0px 3px 0px 0px rgb(34,34,34),
-    0px 7px 10px 0px rgb(17,17,17),
-    inset 0px 1px 1px 0px rgba(250, 250, 250, .2),
-    inset 0px -12px 35px 0px rgba(0, 0, 0, .5);
-    width: 70px;
-    height: 70px;
-    border: 0;
-    border-radius: 35px;
-    text-align: center;
-    line-height: 68px;
+    margin-top: 4px;
 }
 
-.superdev:active {
-    box-shadow: 0px 0px 0px 0px rgb(34,34,34),
-    0px 3px 7px 0px rgb(17,17,17),
-    inset 0px 1px 1px 0px rgba(250, 250, 250, .2),
-    inset 0px -10px 35px 5px rgba(0, 0, 0, .5);
-    background-color: rgb(83,87,93);
-    top: 3px;
-    color: #fff;
-    text-shadow: 0px 0px 3px rgb(250,250,250);
+.header-subtitle:hover {
+    text-decoration: underline;
 }
 
-.superdev:hover {
-    background-color: rgb(100,100,100);
+/* GitHub */
+.header-github {
+    color: white;
+    text-decoration: none;
+    align-self: flex-start;
+}
+
+.header-github:hover {
+    color: #61dafb;
+}
+
+/* Contenedor del juego centrado */
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* Ajusta según altura header */
+    margin: 0;
+    padding: 0;
+    background-color: #222222;
+}
+
+/* Canvas del juego con marco redondeado */
+#embed-html canvas {
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    .App-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-center {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .header-logo {
+        margin: 0 0 5px 0;
+    }
+
+    .header-title-wrapper {
+        margin-right: 0;
+        align-items: center;
+    }
+
+    .header-github {
+        margin-top: 10px;
+        align-self: center;
+    }
+
+    .header-title {
+        padding-left: 0;
+    }
 }

@@ -406,6 +406,7 @@ public class Main extends ApplicationAdapter {
         int seconds = (int) elapsedTime;
         int tenths = (int) ((elapsedTime - seconds) * 10);
         //font.draw(batch, String.format("%d:%d", seconds, tenths), 540, 67);
+        font.draw(batch, seconds + ":" + tenths, 540, 67);
         font.draw(batch, String.valueOf(coinCount), 740, 70);
         batch.end();
 
@@ -448,6 +449,7 @@ public class Main extends ApplicationAdapter {
         batch.draw(bannerTexture, 0, 0, 800, 100);
         batch.draw(panelGameOver, 55, 15, 690, 450);
         //font.draw(batch, String.format("YOUR SCORE  %d", coinCount), 300, 230);//DDR
+        font.draw(batch, "YOUR SCORE " + coinCount, 300, 230);
         batch.end();
 
         if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE)) {

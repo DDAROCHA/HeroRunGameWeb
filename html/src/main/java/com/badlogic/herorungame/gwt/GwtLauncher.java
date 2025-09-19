@@ -9,6 +9,16 @@ import com.badlogic.herorungame.Main;
 public class GwtLauncher extends GwtApplication {
         @Override
         public GwtApplicationConfiguration getConfig () {
+
+            // Fijo 800x480
+            GwtApplicationConfiguration cfg = new GwtApplicationConfiguration(800, 480);
+
+            // Opcional: si el contenedor tiene padding, se puede ajustar
+            cfg.padHorizontal = 0;
+            cfg.padVertical = 0;
+
+            return cfg;
+
             // Resizable application, uses available space in browser with no padding:
             //GwtApplicationConfiguration cfg = new GwtApplicationConfiguration(true);
             //cfg.padVertical = 0;
@@ -16,7 +26,7 @@ public class GwtLauncher extends GwtApplication {
             //return cfg;
             // If you want a fixed size application, comment out the above resizable section,
             // and uncomment below:
-            return new GwtApplicationConfiguration(800, 480);
+            //return new GwtApplicationConfiguration(800, 480);
         }
 
         @Override

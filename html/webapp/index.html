@@ -1,83 +1,39 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>HeroRunGameWeb</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta id="gameViewport" name="viewport" content="width=device-width, initial-scale=1">
-    <link href="styles.css" rel="stylesheet" type="text/css">
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #222222;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeroRunGame</title>
 
-        #embed-html {
-            width: 800px;
-            height: 480px;
-        }
+    <!-- Font Awesome para el icono de GitHub -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p+..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        canvas {
-            width: 800px !important;
-            height: 480px !important;
-            display: block;
-            cursor: default;
-            outline: none;
-        }
-
-        p {
-            text-align: center;
-            color: #eeeeee;
-        }
-
-        a {
-            text-align: center;
-            color: #bbbbff;
-        }
-
-        .superdev {
-            color: rgb(37,37,37);
-            text-shadow: 0px 1px 1px rgba(250,250,250,0.1);
-            font-size: 50pt;
-            display: block;
-            position: relative;
-            text-decoration: none;
-            background-color: rgb(83,87,93);
-            box-shadow: 0px 3px 0px 0px rgb(34,34,34),
-            0px 7px 10px 0px rgb(17,17,17),
-            inset 0px 1px 1px 0px rgba(250, 250, 250, .2),
-            inset 0px -12px 35px 0px rgba(0, 0, 0, .5);
-            width: 70px;
-            height: 70px;
-            border: 0;
-            border-radius: 35px;
-            text-align: center;
-            line-height: 68px;
-        }
-
-        .superdev:active {
-            box-shadow: 0px 0px 0px 0px rgb(34,34,34),
-            0px 3px 7px 0px rgb(17,17,17),
-            inset 0px 1px 1px 0px rgba(250, 250, 250, .2),
-            inset 0px -10px 35px 5px rgba(0, 0, 0, .5);
-            background-color: rgb(83,87,93);
-            top: 3px;
-            color: #fff;
-            text-shadow: 0px 0px 3px rgb(250,250,250);
-        }
-
-        .superdev:hover {
-            background-color: rgb(100,100,100);
-        }
-    </style>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-<a class="superdev" href="javascript:%7B%20window.__gwt_bookmarklet_params%20%3D%20%7B'server_url'%3A'http%3A%2F%2Flocalhost%3A9876%2F'%7D%3B%20var%20s%20%3D%20document.createElement('script')%3B%20s.src%20%3D%20'http%3A%2F%2Flocalhost%3A9876%2Fdev_mode_on.js'%3B%20void(document.getElementsByTagName('head')%5B0%5D.appendChild(s))%3B%7D">&#8635;</a>
-<div id="embed-html"></div>
+
+<!-- Header -->
+<header class="App-header">
+    <div class="header-center">
+        <img src="logo.png" alt="Logo" class="header-logo" />
+        <div class="header-title-wrapper">
+            <h1 class="header-title">HERO RUN GAME</h1>
+            <a href="https://www.linkedin.com/in/diego-da-rocha" target="_blank" rel="noopener noreferrer" class="header-subtitle">
+                By DDR
+            </a>
+        </div>
+        <a href="https://github.com/DDAROCHA" target="_blank" rel="noopener noreferrer" class="header-github">
+            <i class="fab fa-github fa-lg"></i>
+        </a>
+    </div>
+</header>
+
+<!-- Contenedor del juego -->
+<div class="game-container">
+    <div id="embed-html"></div>
+</div>
+
 <script type="text/javascript" src="html/html.nocache.js"></script>
 
 <script>
@@ -96,5 +52,6 @@
     document.getElementById('embed-html').addEventListener('mousedown', handleMouseDown, false);
     document.getElementById('embed-html').addEventListener('mouseup', handleMouseUp, false);
 </script>
+
 </body>
 </html>
