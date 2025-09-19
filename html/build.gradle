@@ -15,7 +15,7 @@ apply plugin: "org.gretty"
 
 gwt {
   gwtVersion = "$gwtFrameworkVersion" // Should match the version used for building the GWT backend. See gradle.properties.
-  maxHeapSize = '1G' // Default 256m is not enough for the GWT compiler. GWT is HUNGRY.
+  maxHeapSize = '3G' // Default 256m is not enough for the GWT compiler. GWT is HUNGRY.
   minHeapSize = '1G'
 
   // Needs to be in front of "modules" below.
@@ -43,7 +43,7 @@ dependencies {
 import org.akhikhl.gretty.AppBeforeIntegrationTestTask
 import org.docstr.gradle.plugins.gwt.GwtSuperDev
 
-gretty.httpPort = 8080
+gretty.httpPort = 8081
 // The line below will need to be changed only if you change the build directory to something other than "build".
 gretty.resourceBase = "${project.layout.buildDirectory.asFile.get().absolutePath}/gwt/draftOut"
 gretty.contextPath = "/"
